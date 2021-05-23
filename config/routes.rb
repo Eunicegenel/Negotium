@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get 'welcome', to: 'sessions#welcome'
   get 'authorized', to: 'sessions#page_requires_login'
   get 'logout', to: 'sessions#out'
+
+  get '/users' => 'users#new', as: 'users_new'
+  post '/users' => 'users#create', as: 'users_create'
 end
