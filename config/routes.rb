@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#new', as: 'users_new'
   post '/users' => 'users#create', as: 'users_create'
+
+  get '/categories' => 'cat#index', as: 'categories'
 end
